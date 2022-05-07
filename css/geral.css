@@ -1,0 +1,15 @@
+.nav-item{
+  padding-left: 15px;
+}
+
+.obrigatorio{
+  color: red;
+}
+
+.span-azul{
+  color: blue;
+}
+
+.navbar{
+  box-shadow: -1px 10px 16px -4px rgba(105,107,105,1);
+}

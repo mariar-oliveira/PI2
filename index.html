@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>NOSSA VOZ</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/geral.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container h-100">
+			<div class="d-flex justify-content-center h-100">
+				<div class="user_card">
+					<div class="d-flex justify-content-center">
+						<div class="brand_logo_container">
+							<img src="imagens/logo.jpeg" class="brand_logo" alt="Logo">
+						</div>
+					</div>
+					<div class="d-flex justify-content-center form_container">
+						<form class="" action="php/usuario/logar.php" method="post">
+							<div class="input-group mb-3">
+								<div class="input-group-append">
+									<span class="input-group-text"><i class="fas fa-at"></i></span>
+								</div>
+								<input type="email" name="usuario_email" class="form-control input_user" value="" placeholder="E-mail">
+							</div>
+							<br>
+							<div class="input-group mb-2">
+								<div class="input-group-append">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+								<input type="password" name="usuario_senha" class="form-control input_pass" value="" placeholder="Senha">
+							</div>
+							<br>
+							<div class="d-flex justify-content-center mt-3 login_container">
+								<button type="submit" name="button" class="btn login_btn">LOGAR</button>
+							</div>
+							<br>
+							<center><a data-toggle="modal" data-target="#cadastrarUsuario" style="cursor: pointer">Não tem uma conta? <span class="span-azul">Cadastre-se!</span></a></center>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="cadastrarUsuario">
+			 <div class="modal-dialog">
+				 <div class="modal-content">
+					 <form action="php/usuario/cadastrar_usuario.php" method="post">
+						 <div class="modal-header">
+							 <h4 class="modal-title">Cadastrar usuário</h4>
+							 <button type="button" class="close" data-dismiss="modal">&times;</button>
+						 </div>
+						 <div class="modal-body">
+							 <label for="usuario_nome">Nome</label> <span class="obrigatorio">*</span> <br>
+							 <input type="text" name="usuario_nome" class="form-control" value="" required>
+							 <br>
+							 <label for="usuario_email">E-mail</label> <span class="obrigatorio">*</span><br>
+							 <input type="email" name="usuario_email" class="form-control" value="" required>
+							 <br>
+
+							 <label for="usuario_senha">Senha <span class="obrigatorio">*</span> </label>
+								<input type="password" name="usuario_senha" class="form-control" value="" required>
+							 <br>
+						 </div>
+
+						 <div class="modal-footer">
+							 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+							 <button type="submit" class="btn btn-success">Confirmar</button>
+						 </div>
+					 </form>
+				 </div>
+			 </div>
+		 </div>
+	</body>
+</html>
